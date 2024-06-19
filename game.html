@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>МинКрест</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+    <div class="title">МинКрест</div>
+    <div class="player-section">
+        <div class="player">
+            <div>Игрок 1 (X)</div>
+            <div>Победы: <span id="player1Wins">0</span></div>
+            <div>Поражения: <span id="player1Losses">0</span></div>
+            <button id="xMine" data-counter="1" onclick="useMine('X')">Мина (1)</button>
+        </div>
+        <div class="player">
+            <div>Игрок 2 (O)</div>
+            <div>Победы: <span id="player2Wins">0</span></div>
+            <div>Поражения: <span id="player2Losses">0</span></div>
+            <button id="oMine" data-counter="1" onclick="useMine('O')">Мина (1)</button>
+        </div>
+    </div>
+    <div class="grid" id="gameBoard"></div>
+    <div class="rules">
+        <h3>Правила:</h3>
+        <ol>
+            <li>Игроки по очереди ставят на свободные клетки поля 4×4 знаки. Один игрок ходит крестиками, а другой – ноликами. Первый, выстроивший в ряд 4 своих фигуры по вертикали, горизонтали или диагонали, выигрывает.</li>
+            <li>У игроков есть по одной мине, вы можете использовать мину только один раз за игру. Чтобы использовать мину, нужно нажать на кнопку "Мина", и после нужно выбрать один из символов противника в клетке. После нажатия на него, он уберётся с поля игры и ход перейдёт на ход противника</li>
+        </ol>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
